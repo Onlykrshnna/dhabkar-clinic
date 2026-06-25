@@ -50,7 +50,7 @@ function Index() {
           color: #6DD3FF;
         }
       `}</style>
-      <img src="/assets/images/logo.png" alt="Smile Dental Care" style={{ height: "64px" }} />
+      <img src="/assets/images/logo.png?v=2" alt="Smile Dental Care" style={{ height: "64px" }} />
       <div className="clinic-name">Smile Dental Care</div>
     </div>
   );

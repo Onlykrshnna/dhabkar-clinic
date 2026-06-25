@@ -474,7 +474,7 @@ input, select, textarea { font: inherit; border: none; outline: none; }
   position: relative; min-height: 100vh;
   display: flex; align-items: center;
   overflow: hidden; 
-  background: url('./assets/images/docter with group.avif') center/cover no-repeat;
+  background: url('./assets/images/docter_with_group.avif') center/cover no-repeat;
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 2;
@@ -671,38 +671,40 @@ input, select, textarea { font: inherit; border: none; outline: none; }
 }
 .about-visual {
   position: relative; border-radius: 24px;
-  overflow: hidden; aspect-ratio: 4/5;
+  overflow: hidden; aspect-ratio: 1;
 }
 .about-img-stack {
-  position: relative; width: 100%; height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr;
+  gap: 1rem;
+  width: 100%; height: 100%;
 }
 .about-img-card {
-  position: absolute; border-radius: 20px; overflow: hidden;
+  position: relative; border-radius: 20px; overflow: hidden;
   box-shadow: var(--shadow-lg);
   transition: transform 0.6s var(--ease);
 }
 .about-img-card:nth-child(1) {
-  width: 75%; height: 65%; top: 0; left: 0;
-  background: linear-gradient(135deg, var(--primary), #3D7FFF);
-  z-index: 2;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
 }
 .about-img-card:nth-child(2) {
-  width: 65%; height: 55%; bottom: 0; right: 0;
-  background: linear-gradient(135deg, var(--accent), #93E4FF);
-  z-index: 1;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 }
 .about-img-card:nth-child(3) {
-  width: 40%; height: 30%; bottom: 15%; left: 10%;
-  background: var(--secondary);
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background: var(--white);
   border: 1px solid rgba(11,95,255,0.1);
-  z-index: 3;
   display: flex; align-items: center; justify-content: center;
   padding: 1.5rem;
 }
 .about-img-card .card-stat {
   text-align: center;
 }
-.about-img-card .card-stat-num {
+.about-img-card .stat-num {
   font-family: var(--f-heading); font-weight: 800;
   font-size: 2rem; color: var(--primary);
 }
@@ -1846,7 +1848,7 @@ input, select, textarea { font: inherit; border: none; outline: none; }
   .trust-bar { margin-top: -1.5rem; }
 
   /* Treatments grid */
-  .treatments-grid { margin-top: 1.75rem; grid-template-columns: 1fr; }
+  .treatments-grid { margin-top: 1.75rem; grid-template-columns: repeat(2, 1fr); }
   .tech-grid { grid-template-columns: 1fr; }
 
   /* Treatment modal */
@@ -2091,7 +2093,7 @@ input, select, textarea { font: inherit; border: none; outline: none; }
 <!-- Navigation -->
 <nav class="nav" id="nav">
   <a href="#" class="nav-brand" data-cursor-btn>
-    <img src="./assets/images/logo.png" alt="Smile Dental Care Logo" style="height: 48px; object-fit: contain;">
+    <img src="./assets/images/logo.png?v=2" alt="Smile Dental Care Logo" style="height: 48px; object-fit: contain;">
   </a>
   <div class="nav-links">
     <a href="#treatments" data-cursor-btn>Treatments</a>
@@ -2193,9 +2195,9 @@ input, select, textarea { font: inherit; border: none; outline: none; }
     <div class="about-grid">
       <div class="about-visual reveal-up">
         <div class="about-img-stack">
-          <div class="about-img-card" data-cursor-img style="background: url('./assets/images/docter with patient.avif') center/cover no-repeat;">
+          <div class="about-img-card" data-cursor-img style="background: url('./assets/images/docter_with_patient.avif') center/cover no-repeat;">
           </div>
-          <div class="about-img-card" data-cursor-img style="background: url('./assets/images/clinic image.avif') center/cover no-repeat;">
+          <div class="about-img-card" data-cursor-img style="background: url('./assets/images/clinic_image.avif') center/cover no-repeat;">
           </div>
           <div class="about-img-card">
             <div class="card-stat">
@@ -2471,7 +2473,7 @@ input, select, textarea { font: inherit; border: none; outline: none; }
   <div class="doctor-shape"></div>
   <div class="container">
     <div class="doctor-grid">
-      <div class="doctor-portrait reveal-up" data-cursor-img style="background: url('./assets/images/docter image.avif') center/cover no-repeat;">
+      <div class="doctor-portrait reveal-up" data-cursor-img style="background: url('./assets/images/docter_image.avif') center/cover no-repeat;">
         <div class="doctor-portrait-inner">
           <svg class="doctor-crest" viewBox="0 0 200 200" fill="none">
             <circle cx="100" cy="100" r="90" stroke="rgba(255,255,255,0.15)" stroke-width="1" stroke-dasharray="4 4"/>
@@ -2999,7 +3001,7 @@ input, select, textarea { font: inherit; border: none; outline: none; }
     <div class="footer-grid">
       <div>
         <div class="footer-brand" style="margin-bottom: 1rem;">
-          <img src="./assets/images/logo.png" alt="Smile Dental Care Logo" style="height: 48px; background: white; padding: 8px 12px; border-radius: 8px; object-fit: contain;">
+          <img src="./assets/images/logo.png?v=2" alt="Smile Dental Care Logo" style="height: 48px; background: white; padding: 8px 12px; border-radius: 8px; object-fit: contain;">
         </div>
         <p class="footer-desc">A trusted dental health centre in Kuvempu Nagara — comprehensive dental care led by our expert dental team with a patient-first approach.</p>
         <div class="footer-rating">
