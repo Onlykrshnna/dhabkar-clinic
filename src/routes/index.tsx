@@ -4,10 +4,10 @@ import { useEffect } from "react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Smile Dental Care — Best Dental Clinic in Kuvempu Nagara, Mysuru" },
-      { name: "description", content: "Expert dental care in Kuvempu Nagara, Mysuru. 4.8★ from 1940 patients. Invisalign, implants, veneers, teeth whitening, and preventive care." },
-      { property: "og:title", content: "Smile Dental Care — Kuvempu Nagara, Mysuru" },
-      { property: "og:description", content: "Healthy teeth and gums start with the right habits. Visit Smile Dental Care for advanced, painless, and personalized dental treatments." },
+      { title: "Dhabkar Super Speciality Clinic — Best medical clinic in Maninagar, Ahmedabad, Gujarat 380008" },
+      { name: "description", content: "Expert dental care in Maninagar, Ahmedabad, Gujarat 380008. 4.8★ from 1940 patients. Invisalign, implants, veneers, teeth whitening, and preventive care." },
+      { property: "og:title", content: "Dhabkar Super Speciality Clinic — Maninagar, Ahmedabad, Gujarat 380008" },
+      { property: "og:description", content: "Healthy teeth and gums start with the right habits. Visit Dhabkar Super Speciality Clinic for advanced, painless, and personalized dental treatments." },
     ],
   }),
   component: Index,
@@ -50,8 +50,8 @@ function Index() {
           color: #6DD3FF;
         }
       `}</style>
-      <img src="/assets/images/logo.png?v=2" alt="Smile Dental Care" style={{ height: "64px" }} />
-      <div className="clinic-name">Smile Dental Care</div>
+      <img src="https://placehold.co/600x400" alt="Dhabkar Super Speciality Clinic" style={{ height: "64px" }} />
+      <div className="clinic-name">Dhabkar Super Speciality Clinic</div>
     </div>
   );
 }
