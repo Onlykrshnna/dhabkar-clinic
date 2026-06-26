@@ -5,9 +5,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Dhabkar Super Speciality Clinic — Best medical clinic in Maninagar, Ahmedabad, Gujarat 380008" },
-      { name: "description", content: "Expert dental care in Maninagar, Ahmedabad, Gujarat 380008. 4.8★ from 1940 patients. Invisalign, implants, veneers, teeth whitening, and preventive care." },
+      { name: "description", content: "Expert medical care in Maninagar, Ahmedabad, Gujarat 380008. 4.7★ from 231 patients. Cardiology, Pathology, Health Checkups, and preventive care." },
       { property: "og:title", content: "Dhabkar Super Speciality Clinic — Maninagar, Ahmedabad, Gujarat 380008" },
-      { property: "og:description", content: "Healthy teeth and gums start with the right habits. Visit Dhabkar Super Speciality Clinic for advanced, painless, and personalized dental treatments." },
+      { property: "og:description", content: "Your health is our priority. Visit Dhabkar Super Speciality Clinic for advanced and personalized medical treatments." },
     ],
   }),
   component: Index,
@@ -31,15 +31,13 @@ function Index() {
       gap: "1.5rem"
     }}>
       <style>{`
-        @keyframes pulseTooth {
+        @keyframes pulseLogo {
           0%, 100% { transform: scale(1); opacity: 0.8; }
-          50% { transform: scale(1.15); opacity: 1; filter: drop-shadow(0 0 15px rgba(109,211,255,0.6)); }
+          50% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 15px rgba(109,211,255,0.6)); }
         }
         .pulse-logo {
-          width: 64px;
-          height: 64px;
           color: #6DD3FF;
-          animation: pulseTooth 2s infinite ease-in-out;
+          animation: pulseLogo 2s infinite ease-in-out;
         }
         .clinic-name {
           font-weight: 700;
@@ -50,8 +48,7 @@ function Index() {
           color: #6DD3FF;
         }
       `}</style>
-      <img src="https://placehold.co/600x400" alt="Dhabkar Super Speciality Clinic" style={{ height: "64px" }} />
-      <div className="clinic-name">Dhabkar Super Speciality Clinic</div>
+      <div className="clinic-name pulse-logo" style={{ fontSize: "2rem" }}>Dhabkar Clinic</div>
     </div>
   );
 }
